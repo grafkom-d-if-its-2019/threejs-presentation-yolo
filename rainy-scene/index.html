@@ -54,8 +54,6 @@
             this.color = 0xffffff;
             this.sizeAttenuation = true;
             this.redraw = function () {
-                // scene.remove(scene.getObjectByName("particles1"));
-                // scene.remove(scene.getObjectByName("particles2"));
                 createPointCloud(controls.size, controls.transparent, controls.opacity, controls.sizeAttenuation, controls.color);
             };
         };
@@ -82,7 +80,6 @@
                         Math.random() * range * 1.5,
                         Math.random() * range - range / 2);
                 particle.velocityY = 0.1 + Math.random() / 5;
-                
                 geom.vertices.push(particle);
             }
             cloud = new THREE.ParticleSystem(geom, material);
@@ -94,7 +91,6 @@
             var vertices = cloud.geometry.vertices;
             vertices.forEach(function (v) {
                 v.y = v.y - (v.velocityY);
-                
                 if (v.y <= 0) v.y = 60;
                 
             });
