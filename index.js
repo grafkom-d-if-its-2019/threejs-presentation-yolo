@@ -36,9 +36,9 @@ function createSprites()
 
 function spriteTexture()
 {
-    var spriteMap = new THREE.TextureLoader().load( "tes.bmp" );
+    var spriteMap = new THREE.TextureLoader().load( "../assets/tes.bmp" );
     var spriteMaterial = new THREE.SpriteMaterial( { map: spriteMap, color: 0xffffff } );
-    var spriteMap2 = new THREE.TextureLoader().load( "Spaceship.png" );
+    var spriteMap2 = new THREE.TextureLoader().load( "../assets/Spaceship.png" );
     var spriteMaterial2 = new THREE.SpriteMaterial( { map: spriteMap2, color: 0xffffff } );
     var sprite = new THREE.Sprite( spriteMaterial );
     var sprite2 = sprite.clone();
